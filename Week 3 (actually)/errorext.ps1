@@ -1,0 +1,1 @@
+Get-ChildItem -Path "C:\xampp\apache\logs\*.log" | ForEach-Object { Get-Content $_.FullName | Where-Object { $_ -match 'error' } }
